@@ -1,210 +1,496 @@
 ---
 layout: default
-title: Home - Authentic Italian Cuisine & Voice AI Concierge
+title: Simple Fast Food Menu
 has_inline_widget: true
 ---
 
-<!-- Hero Section -->
-<section class="hero-section">
-  <div class="hero-pill">
-    <span class="pulse-dot"></span>
-    <span>Michelin Guide Recommended &bull; Voice AI Concierge Online</span>
+<!-- Hero Fast Food Banner -->
+<section class="hero-mcd">
+  <div class="hero-badge-gold">
+    <span>★</span> World Famous Quality &bull; Fast & Hot
   </div>
 
-  <h1 class="hero-title">
-    Authentic Italian Soul, <br><span class="text-gold">Contemporary Culinary Art.</span>
+  <h1 class="hero-title-mcd">
+    I'm Lovin' <span>Every Bite.</span>
   </h1>
 
-  <p class="hero-subtitle">
-    Indulge in artisanal hand-rolled pastas, dry-aged prime steaks, and wood-fired gastronomy in an intimate, modern atmosphere. Reserve your table or speak with our interactive Voice Host.
+  <p class="hero-subtitle-mcd">
+    Burgers, crispy golden fries, icy drinks, and desserts. Order at the counter or drive-thru with your voice!
   </p>
 
-  <div class="hero-cta-group">
-    <a href="{{ '/menu.html' | relative_url }}" class="btn btn-primary">
-      Explore Dining Menu
-    </a>
-    <a href="{{ '/reservations.html' | relative_url }}" class="btn btn-secondary">
-      Book a Table
-    </a>
-  </div>
-
-  <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">Handcrafted Daily</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">250+</div>
-      <div class="stat-label">Italian & Napa Wines</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">4.9 ★</div>
-      <div class="stat-label">Over 1,200 Reviews</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">24 / 7</div>
-      <div class="stat-label">AI Voice Concierge</div>
+  <!-- Drive-thru Voice Order Callout -->
+  <div class="voice-drivethru-box">
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <span class="voice-box-icon">🎙️</span>
+      <div>
+        <div class="voice-box-title">Order with Your Voice (Drive-Thru Style)</div>
+        <div class="voice-box-desc">
+          Click the purple microphone assistant at the bottom right. Try saying: <em>"Give me a Big Mac with large fries and a Coke!"</em>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- Voice Concierge Spotlight Section -->
-<div class="section-container" style="margin-top: 2rem; margin-bottom: 2rem;">
-  <div class="voice-ai-banner">
-    <div class="voice-ai-content">
-      <div class="hero-pill" style="margin-bottom: 0.75rem; background: rgba(99,102,241,0.25);">
-        <span>🎙️ Powered by UiPath Resolve</span>
-      </div>
-      <h3>Meet Your 24/7 Voice & Chat Concierge</h3>
-      <p>
-        Got questions about dietary restrictions, wine pairings, or table availability? Click the widget at the bottom right to talk directly with our restaurant voice host. Instant, hands-free dining assistance!
-      </p>
-      <div class="voice-ai-tags">
-        <span class="voice-tag">✓ Voice & Speech Enabled</span>
-        <span class="voice-tag">✓ Real-time Table Reservations</span>
-        <span class="voice-tag">✓ Allergen & Ingredient Advisory</span>
-        <span class="voice-tag">✓ Sommelier Pairings</span>
-      </div>
-    </div>
+<!-- Category Navigation Bar -->
+<div class="category-nav-wrapper">
+  <div class="category-nav-container">
+    <button class="cat-tab active" data-filter="all">
+      <span class="cat-emoji">🍔</span> All Items
+    </button>
+    <button class="cat-tab" data-filter="burgers">
+      <span class="cat-emoji">🍔</span> Burgers
+    </button>
+    <button class="cat-tab" data-filter="chicken">
+      <span class="cat-emoji">🍗</span> Chicken & McNuggets
+    </button>
+    <button class="cat-tab" data-filter="fries">
+      <span class="cat-emoji">🍟</span> Fries & Sides
+    </button>
+    <button class="cat-tab" data-filter="drinks">
+      <span class="cat-emoji">🥤</span> McCafé & Drinks
+    </button>
+    <button class="cat-tab" data-filter="sweets">
+      <span class="cat-emoji">🍦</span> Sweets & Treats
+    </button>
+    <button class="cat-tab" data-filter="breakfast">
+      <span class="cat-emoji">🍳</span> All-Day Breakfast
+    </button>
   </div>
 </div>
 
-<!-- Chef's Signature Selections -->
-<section class="section-container">
-  <div class="section-header">
-    <span class="section-subtitle">Culinary Highlights</span>
-    <h2 class="section-title">Chef Matteo's Signature Dishes</h2>
-    <p class="section-desc">
-      Each recipe honors generations of Northern Italian heritage, elevated with local farm-to-table organic produce.
-    </p>
-  </div>
+<!-- Main Menu Grid -->
+<main class="menu-layout">
 
-  <div class="card-grid">
-    <div class="dish-card">
-      <div>
-        <div class="dish-header">
-          <h3 class="dish-name">Tagliolini al Tartufo Nero</h3>
-          <span class="dish-price">$38</span>
+  <!-- Burgers Section -->
+  <section class="menu-section" data-cat="burgers">
+    <h2 class="category-section-title">🍔 Burgers & Sandwiches</h2>
+    <div class="mcd-grid">
+
+      <div class="mcd-card" data-category="burgers">
+        <span class="card-badge-top">Iconic</span>
+        <div class="mcd-card-img">🍔</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Big Mac®</h3>
+          <div class="mcd-card-cal">590 Cal.</div>
+          <p class="mcd-card-desc">
+            Two 100% pure beef patties, special sauce, crisp shredded lettuce, American cheese, pickles, and onions on a toasted sesame seed bun.
+          </p>
         </div>
-        <p class="dish-desc">
-          Hand-extruded egg tagliolini tossed with cultured mountain butter, 36-month Parmigiano-Reggiano, and freshly shaved Norcia black truffles.
-        </p>
-      </div>
-      <div class="dish-tags">
-        <span class="badge badge-chef">Chef's Special</span>
-        <span class="badge badge-vegan">Vegetarian</span>
-      </div>
-    </div>
-
-    <div class="dish-card">
-      <div>
-        <div class="dish-header">
-          <h3 class="dish-name">Bistecca alla Fiorentina</h3>
-          <span class="dish-price">$68</span>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$5.99</span>
+          <button class="btn-add-item" onclick="addToBag('Big Mac®', 5.99)">
+            <span>+</span> Add
+          </button>
         </div>
-        <p class="dish-desc">
-          32-day dry-aged prime porterhouse grilled over olive wood embers, finished with rosemary-infused estate olive oil and flaky Maldon sea salt.
-        </p>
       </div>
-      <div class="dish-tags">
-        <span class="badge badge-chef">Signature</span>
-        <span class="badge badge-gf">Gluten-Free</span>
-      </div>
-    </div>
 
-    <div class="dish-card">
-      <div>
-        <div class="dish-header">
-          <h3 class="dish-name">Branzino Mediterraneo</h3>
-          <span class="dish-price">$44</span>
+      <div class="mcd-card" data-category="burgers">
+        <span class="card-badge-top">Fresh Beef</span>
+        <div class="mcd-card-img">🥩</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Quarter Pounder® with Cheese</h3>
+          <div class="mcd-card-cal">520 Cal.</div>
+          <p class="mcd-card-desc">
+            Quarter-pound 100% fresh beef patty, seasoned with salt & pepper, two slices of melted American cheese, slivered onions, and pickles.
+          </p>
         </div>
-        <p class="dish-desc">
-          Pan-crisped Mediterranean sea bass fillet, Sicilian caper berries, blistered heirloom cherry tomatoes, fennel pollen, and lemon-oregano emulsion.
-        </p>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$6.29</span>
+          <button class="btn-add-item" onclick="addToBag('Quarter Pounder® with Cheese', 6.29)">
+            <span>+</span> Add
+          </button>
+        </div>
       </div>
-      <div class="dish-tags">
-        <span class="badge badge-gf">Gluten-Free</span>
+
+      <div class="mcd-card" data-category="burgers">
+        <div class="mcd-card-img">🍔</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Double Cheeseburger</h3>
+          <div class="mcd-card-cal">450 Cal.</div>
+          <p class="mcd-card-desc">
+            Two 100% pure beef patties, two slices of melted American cheese, tangy pickles, minced onions, ketchup, and mustard.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$3.89</span>
+          <button class="btn-add-item" onclick="addToBag('Double Cheeseburger', 3.89)">
+            <span>+</span> Add
+          </button>
+        </div>
       </div>
+
+      <div class="mcd-card" data-category="burgers">
+        <div class="mcd-card-img">🍔</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">McDouble®</h3>
+          <div class="mcd-card-cal">400 Cal.</div>
+          <p class="mcd-card-desc">
+            Two 100% pure beef patties with one slice of melty American cheese, crunchy pickles, diced onions, ketchup, and mustard.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$3.29</span>
+          <button class="btn-add-item" onclick="addToBag('McDouble®', 3.29)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="burgers">
+        <span class="card-badge-top">Spicy</span>
+        <div class="mcd-card-img">🌶️</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Spicy McCrispy™</h3>
+          <div class="mcd-card-cal">530 Cal.</div>
+          <p class="mcd-card-desc">
+            Southern-style crispy chicken fillet topped with spicy pepper sauce and crinkle cut pickles on a toasted potato roll.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$5.49</span>
+          <button class="btn-add-item" onclick="addToBag('Spicy McCrispy™', 5.49)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="burgers">
+        <div class="mcd-card-img">🐟</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Filet-O-Fish®</h3>
+          <div class="mcd-card-cal">390 Cal.</div>
+          <p class="mcd-card-desc">
+            Wild-caught Alaska Pollock fillet with creamy tartar sauce and melty American cheese on a warm steamed bun.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$4.99</span>
+          <button class="btn-add-item" onclick="addToBag('Filet-O-Fish®', 4.99)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
     </div>
+  </section>
+
+  <!-- Chicken Section -->
+  <section class="menu-section" data-cat="chicken">
+    <h2 class="category-section-title">🍗 Chicken & McNuggets</h2>
+    <div class="mcd-grid">
+
+      <div class="mcd-card" data-category="chicken">
+        <span class="card-badge-top">Fan Favorite</span>
+        <div class="mcd-card-img">🍗</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">10 pc. Chicken McNuggets®</h3>
+          <div class="mcd-card-cal">410 Cal.</div>
+          <p class="mcd-card-desc">
+            Tender, juicy 100% white meat chicken coated in a golden, crispy batter. Served with your choice of dipping sauces.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$5.49</span>
+          <button class="btn-add-item" onclick="addToBag('10 pc. McNuggets®', 5.49)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="chicken">
+        <span class="card-badge-top">Shareable</span>
+        <div class="mcd-card-img">🍗</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">20 pc. Chicken McNuggets®</h3>
+          <div class="mcd-card-cal">830 Cal.</div>
+          <p class="mcd-card-desc">
+            Party-ready box of 20 crispy golden McNuggets with your choice of 3 dipping sauces (BBQ, Sweet 'N Sour, Ranch).
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$8.99</span>
+          <button class="btn-add-item" onclick="addToBag('20 pc. McNuggets®', 8.99)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="chicken">
+        <div class="mcd-card-img">🥪</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">McChicken®</h3>
+          <div class="mcd-card-cal">400 Cal.</div>
+          <p class="mcd-card-desc">
+            Crispy golden chicken patty topped with shredded lettuce and creamy mayonnaise on a toasted bun.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$3.29</span>
+          <button class="btn-add-item" onclick="addToBag('McChicken®', 3.29)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Fries & Sides Section -->
+  <section class="menu-section" data-cat="fries">
+    <h2 class="category-section-title">🍟 World Famous Fries & Sides</h2>
+    <div class="mcd-grid">
+
+      <div class="mcd-card" data-category="fries">
+        <span class="card-badge-top">Iconic</span>
+        <div class="mcd-card-img">🍟</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">World Famous Fries® (Medium)</h3>
+          <div class="mcd-card-cal">320 Cal.</div>
+          <p class="mcd-card-desc">
+            Crispy and golden on the outside, fluffy on the inside. Seasoned with just the right amount of salt.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$3.49</span>
+          <button class="btn-add-item" onclick="addToBag('Medium Fries®', 3.49)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="fries">
+        <span class="card-badge-top">Best Value</span>
+        <div class="mcd-card-img">🍟</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">World Famous Fries® (Large)</h3>
+          <div class="mcd-card-cal">480 Cal.</div>
+          <p class="mcd-card-desc">
+            Large portion of golden shoestring potatoes cooked to crispy perfection.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$4.19</span>
+          <button class="btn-add-item" onclick="addToBag('Large Fries®', 4.19)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="fries">
+        <div class="mcd-card-img">🍎</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Fresh Apple Slices</h3>
+          <div class="mcd-card-cal">15 Cal.</div>
+          <p class="mcd-card-desc">
+            Chilled, peeled crisp tart-sweet apple slices in an easy grab-and-go pouch.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$1.49</span>
+          <button class="btn-add-item" onclick="addToBag('Apple Slices', 1.49)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Drinks Section -->
+  <section class="menu-section" data-cat="drinks">
+    <h2 class="category-section-title">🥤 McCafé® & Beverages</h2>
+    <div class="mcd-grid">
+
+      <div class="mcd-card" data-category="drinks">
+        <div class="mcd-card-img">🥤</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Coca-Cola® Classic (Large)</h3>
+          <div class="mcd-card-cal">210 Cal.</div>
+          <p class="mcd-card-desc">
+            The crisp, cold, and refreshing signature fountain taste you know and love.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$2.19</span>
+          <button class="btn-add-item" onclick="addToBag('Large Coca-Cola®', 2.19)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="drinks">
+        <span class="card-badge-top">Sweet Treat</span>
+        <div class="mcd-card-img">☕</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">McCafé® Caramel Frappé</h3>
+          <div class="mcd-card-cal">430 Cal.</div>
+          <p class="mcd-card-desc">
+            Blended ice drink with rich coffee flavor and sweet caramel, topped with whipped cream and caramel drizzle.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$3.99</span>
+          <button class="btn-add-item" onclick="addToBag('Caramel Frappé', 3.99)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="drinks">
+        <div class="mcd-card-img">🥤</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Vanilla Shake</h3>
+          <div class="mcd-card-cal">510 Cal.</div>
+          <p class="mcd-card-desc">
+            Thick and creamy vanilla soft serve hand-spun with vanilla syrup, whipped light cream, and a maraschino cherry.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$3.89</span>
+          <button class="btn-add-item" onclick="addToBag('Vanilla Shake', 3.89)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sweets & Treats -->
+  <section class="menu-section" data-cat="sweets">
+    <h2 class="category-section-title">🍦 Sweets & Treats</h2>
+    <div class="mcd-grid">
+
+      <div class="mcd-card" data-category="sweets">
+        <span class="card-badge-top">Legendary</span>
+        <div class="mcd-card-img">🍨</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">McFlurry® with OREO®</h3>
+          <div class="mcd-card-cal">510 Cal.</div>
+          <p class="mcd-card-desc">
+            Creamy vanilla soft serve swirled with crunchy crushed OREO® cookies.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$4.29</span>
+          <button class="btn-add-item" onclick="addToBag('OREO® McFlurry®', 4.29)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="sweets">
+        <span class="card-badge-top">Warm & Crispy</span>
+        <div class="mcd-card-img">🥧</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Baked Hot Apple Pie</h3>
+          <div class="mcd-card-cal">230 Cal.</div>
+          <p class="mcd-card-desc">
+            Flaky golden lattice pastry filled with warm apples and cinnamon sugar.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$1.99</span>
+          <button class="btn-add-item" onclick="addToBag('Baked Apple Pie', 1.99)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="sweets">
+        <div class="mcd-card-img">🍦</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Vanilla Soft Serve Cone</h3>
+          <div class="mcd-card-cal">200 Cal.</div>
+          <p class="mcd-card-desc">
+            Velvety sweet vanilla soft serve piled high in a crisp golden wafer cone.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$1.69</span>
+          <button class="btn-add-item" onclick="addToBag('Vanilla Cone', 1.69)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Breakfast Section -->
+  <section class="menu-section" data-cat="breakfast">
+    <h2 class="category-section-title">🍳 All-Day Breakfast</h2>
+    <div class="mcd-grid">
+
+      <div class="mcd-card" data-category="breakfast">
+        <span class="card-badge-top">Morning Classic</span>
+        <div class="mcd-card-img">🍳</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Egg McMuffin®</h3>
+          <div class="mcd-card-cal">310 Cal.</div>
+          <p class="mcd-card-desc">
+            Freshly cracked Grade A egg, savory Canadian bacon, and melted American cheese on a toasted buttered English muffin.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$4.79</span>
+          <button class="btn-add-item" onclick="addToBag('Egg McMuffin®', 4.79)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="breakfast">
+        <div class="mcd-card-img">🥔</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Crispy Golden Hash Browns</h3>
+          <div class="mcd-card-cal">140 Cal.</div>
+          <p class="mcd-card-desc">
+            Crunchy on the outside and soft potato shreds on the inside. The essential breakfast accompaniment.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$2.19</span>
+          <button class="btn-add-item" onclick="addToBag('Hash Browns', 2.19)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+      <div class="mcd-card" data-category="breakfast">
+        <div class="mcd-card-img">🥞</div>
+        <div class="mcd-card-body">
+          <h3 class="mcd-card-name">Hotcakes with Butter & Syrup</h3>
+          <div class="mcd-card-cal">580 Cal.</div>
+          <p class="mcd-card-desc">
+            Three golden, fluffy hotcakes served piping hot with real butter and warm maple flavored hotcake syrup.
+          </p>
+        </div>
+        <div class="mcd-card-footer">
+          <span class="mcd-card-price">$4.69</span>
+          <button class="btn-add-item" onclick="addToBag('Hotcakes', 4.69)">
+            <span>+</span> Add
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- Floating Order Tray Summary -->
+<div class="order-tray-bar" id="orderTray">
+  <div class="tray-summary">
+    <span>🛍️ <span id="trayItemCount">0</span> Items</span>
+    <span>&bull;</span>
+    <span class="tray-total" id="trayTotalPrice">$0.00</span>
   </div>
-
-  <div style="text-align: center; margin-top: 2.5rem;">
-    <a href="{{ '/menu.html' | relative_url }}" class="btn btn-secondary">
-      View Complete Dinner & Drinks Menu &rarr;
-    </a>
-  </div>
-</section>
-
-<!-- Experience Pillars -->
-<section class="section-container" style="background: var(--color-surface); border-radius: var(--radius-lg); padding: 3.5rem 2rem; border: 1px solid var(--color-border);">
-  <div class="section-header">
-    <span class="section-subtitle">Why Dine With Us</span>
-    <h2 class="section-title">The Savoria Experience</h2>
-  </div>
-
-  <div class="card-grid">
-    <div class="card" style="background: var(--color-bg);">
-      <div class="card-icon">🍝</div>
-      <h3 class="card-title">Fresh Pasta Laboratory</h3>
-      <p class="card-desc">
-        Our pasta chefs knead and shape every strand and tortelloni each morning using stone-milled Italian semolina and farm eggs.
-      </p>
-    </div>
-
-    <div class="card" style="background: var(--color-bg);">
-      <div class="card-icon">🍷</div>
-      <h3 class="card-title">Sommelier's Wine Cellar</h3>
-      <p class="card-desc">
-        A temperature-controlled sanctuary featuring Barolos, Brunellos, Super Tuscans, and boutique biodynamic California varietals.
-      </p>
-    </div>
-
-    <div class="card" style="background: var(--color-bg);">
-      <div class="card-icon">🌿</div>
-      <h3 class="card-title">Hyper-Local Sourcing</h3>
-      <p class="card-desc">
-        We partner directly with regional regenerative farms, ensuring your seafood is sustainably harvested and produce picked within 24 hours.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- Guest Testimonials -->
-<section class="section-container">
-  <div class="section-header">
-    <span class="section-subtitle">Diner Accolades</span>
-    <h2 class="section-title">What Our Guests Say</h2>
-  </div>
-
-  <div class="card-grid">
-    <div class="card">
-      <div style="color: var(--color-gold); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
-      <p class="card-desc" style="font-style: italic; margin-bottom: 1rem;">
-        "The black truffle tagliolini is nothing short of heavenly. Booking by voice on their site was shockingly fast and intuitive!"
-      </p>
-      <div style="font-weight: 700; color: #ffffff;">Elena Rostova</div>
-      <div style="font-size: 0.8rem; color: var(--color-text-subtle);">Verified OpenTable Diner</div>
-    </div>
-
-    <div class="card">
-      <div style="color: var(--color-gold); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
-      <p class="card-desc" style="font-style: italic; margin-bottom: 1rem;">
-        "Warm ambiance, impeccable wine pairings, and the steak was cooked to absolute wood-fired perfection. Best Italian in the Bay."
-      </p>
-      <div style="font-weight: 700; color: #ffffff;">Julian Vance</div>
-      <div style="font-size: 0.8rem; color: var(--color-text-subtle);">Food & Wine Critic</div>
-    </div>
-
-    <div class="card">
-      <div style="color: var(--color-gold); font-size: 1.1rem; margin-bottom: 0.5rem;">★★★★★</div>
-      <p class="card-desc" style="font-style: italic; margin-bottom: 1rem;">
-        "Hosted our anniversary in the private wine room. The staff made us feel like family. We can't wait to return!"
-      </p>
-      <div style="font-weight: 700; color: #ffffff;">Marcus & Sophia Lin</div>
-      <div style="font-size: 0.8rem; color: var(--color-text-subtle);">Culinary Club Member</div>
-    </div>
-  </div>
-</section>
+  <button class="tray-btn-checkout" onclick="checkoutOrder()">
+    Review Order & Checkout &rarr;
+  </button>
+</div>
 
 <!-- Required UiPath Resolve Voice Widget on index.html -->
 <script src="https://staging.uipath.com/vajrang/DefaultTenant/cx_/widget/v1/loader.js"
@@ -226,10 +512,9 @@ has_inline_widget: true
         if (!allow.toLowerCase().includes('microphone')) {
           var updated = allow ? allow + '; microphone' : 'microphone';
           iframe.setAttribute('allow', updated);
-          console.info('[UiPath Voice Support] Microphone permission granted to iframe.');
         }
       } catch (e) {
-        console.warn('[UiPath Voice Support] Could not set microphone permission:', e);
+        console.warn('[UiPath Voice Support] Microphone set error:', e);
       }
     }
 
@@ -248,4 +533,58 @@ has_inline_widget: true
 
     observer.observe(document.documentElement, { childList: true, subtree: true });
   })();
+
+  // Filter Categories
+  (function() {
+    var tabs = document.querySelectorAll('.cat-tab');
+    var sections = document.querySelectorAll('.menu-section');
+
+    tabs.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        tabs.forEach(function(t) { t.classList.remove('active'); });
+        tab.classList.add('active');
+
+        var filter = tab.getAttribute('data-filter');
+        sections.forEach(function(sec) {
+          if (filter === 'all' || sec.getAttribute('data-cat') === filter) {
+            sec.style.display = 'block';
+          } else {
+            sec.style.display = 'none';
+          }
+        });
+      });
+    });
+  })();
+
+  // Order Bag State
+  var currentOrder = [];
+
+  function addToBag(itemName, price) {
+    currentOrder.push({ name: itemName, price: price });
+    updateTrayUI();
+  }
+
+  function updateTrayUI() {
+    var count = currentOrder.length;
+    var total = currentOrder.reduce(function(sum, item) { return sum + item.price; }, 0);
+
+    var navCount = document.getElementById('navBagCount');
+    var trayCount = document.getElementById('trayItemCount');
+    var trayPrice = document.getElementById('trayTotalPrice');
+    var tray = document.getElementById('orderTray');
+
+    if (navCount) navCount.innerText = count;
+    if (trayCount) trayCount.innerText = count;
+    if (trayPrice) trayPrice.innerText = '$' + total.toFixed(2);
+
+    if (tray && count > 0) {
+      tray.classList.add('is-visible');
+    }
+  }
+
+  function checkoutOrder() {
+    var total = currentOrder.reduce(function(sum, item) { return sum + item.price; }, 0);
+    var summary = currentOrder.map(function(i) { return i.name + ' ($' + i.price.toFixed(2) + ')'; }).join('\\n');
+    alert('🛍️ Your Order Summary (' + currentOrder.length + ' items):\\n\\n' + summary + '\\n\\nTotal: $' + total.toFixed(2) + '\\n\\nTip: You can also say these items to our Voice AI Host at the bottom right to order hands-free!');
+  }
 </script>

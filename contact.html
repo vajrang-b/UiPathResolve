@@ -1,142 +1,77 @@
 ---
 layout: default
-title: Contact & Hours - Visit Savoria Trattoria
+title: Drive-Thru & Store Hours
 ---
 
-<section class="hero-section" style="padding: 4rem 1.5rem 3rem;">
-  <span class="section-subtitle">We Look Forward To Welcoming You</span>
-  <h1 class="hero-title" style="font-size: 3rem;">Location, Hours & Inquiries</h1>
-  <p class="hero-subtitle">
-    Conveniently located in the heart of the historic Culinary District with complimentary valet parking.
+<section class="hero-mcd" style="padding: 2.5rem 1.5rem;">
+  <div class="hero-badge-gold">
+    <span>🚗</span> Drive-Thru & Pickup
+  </div>
+  <h1 class="hero-title-mcd">
+    Hours & <span>Drive-Thru Lane</span>
+  </h1>
+  <p class="hero-subtitle-mcd">
+    Fast, friendly, and always hot. Cruise through the drive-thru or grab your order inside.
   </p>
 </section>
 
-<div class="section-container" style="margin-top: 2rem;">
+<main class="menu-layout">
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2rem;">
 
-  <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; margin-bottom: 4rem;">
-    <!-- Contact Details & Hours -->
-    <div>
-      <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Hours of Hospitality</h2>
+    <div class="mcd-card" style="padding: 2rem;">
+      <h2 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 1.25rem; color: var(--color-mcd-red);">
+        ⏰ Service Hours
+      </h2>
+      <table style="width: 100%; border-collapse: collapse; font-size: 1rem;">
+        <tr style="border-bottom: 1px solid var(--color-mcd-light-gray);">
+          <td style="padding: 0.75rem 0; font-weight: 800;">🚗 Drive-Thru Lane</td>
+          <td style="padding: 0.75rem 0; text-align: right; color: var(--color-mcd-red); font-weight: 900;">Open 24/7</td>
+        </tr>
+        <tr style="border-bottom: 1px solid var(--color-mcd-light-gray);">
+          <td style="padding: 0.75rem 0; font-weight: 800;">🍔 Dining Lobby</td>
+          <td style="padding: 0.75rem 0; text-align: right; color: var(--color-mcd-dark);">6:00 AM – 11:00 PM</td>
+        </tr>
+        <tr>
+          <td style="padding: 0.75rem 0; font-weight: 800;">🍳 Breakfast Menu</td>
+          <td style="padding: 0.75rem 0; text-align: right; color: #D97706; font-weight: 800;">5:00 AM – 10:30 AM</td>
+        </tr>
+      </table>
 
-      <div class="card" style="margin-bottom: 2rem;">
-        <table style="width: 100%; border-collapse: collapse; color: var(--color-text-main);">
-          <tr style="border-bottom: 1px solid var(--color-border); padding: 0.75rem 0;">
-            <td style="padding: 0.85rem 0; font-weight: 600;">Monday – Thursday</td>
-            <td style="padding: 0.85rem 0; text-align: right; color: var(--color-text-muted);">{{ site.restaurant.hours.mon_thu }}</td>
-          </tr>
-          <tr style="border-bottom: 1px solid var(--color-border);">
-            <td style="padding: 0.85rem 0; font-weight: 600;">Friday – Saturday</td>
-            <td style="padding: 0.85rem 0; text-align: right; color: var(--color-text-muted);">{{ site.restaurant.hours.fri_sat }}</td>
-          </tr>
-          <tr>
-            <td style="padding: 0.85rem 0; font-weight: 600;">Sunday Brunch & Dinner</td>
-            <td style="padding: 0.85rem 0; text-align: right; color: var(--color-gold);">{{ site.restaurant.hours.sun }}</td>
-          </tr>
-        </table>
-      </div>
-
-      <h2 style="font-size: 1.7rem; margin-bottom: 1rem;">Direct Contact</h2>
-      <div class="card-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
-        <div class="card">
-          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📞</div>
-          <div style="font-weight: 600; color: #ffffff;">Phone</div>
-          <a href="tel:{{ site.restaurant.phone }}" style="font-size: 0.95rem;">{{ site.restaurant.phone }}</a>
-        </div>
-        <div class="card">
-          <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">✉️</div>
-          <div style="font-weight: 600; color: #ffffff;">General & Events</div>
-          <a href="mailto:{{ site.restaurant.email }}" style="font-size: 0.95rem;">{{ site.restaurant.email }}</a>
-        </div>
-      </div>
-
-      <div style="margin-top: 2rem;">
-        <div class="card" style="border-color: rgba(99,102,241,0.4); background: rgba(99,102,241,0.08);">
-          <div style="display: flex; align-items: center; gap: 1rem;">
-            <span style="font-size: 2rem;">🎙️</span>
-            <div>
-              <div style="font-weight: 700; color: #ffffff;">UiPath Resolve Voice Host</div>
-              <div style="font-size: 0.88rem; color: var(--color-text-muted);">Available 24/7 for phone & browser voice reservations, menu questions, and directions.</div>
-            </div>
-          </div>
-        </div>
+      <div style="margin-top: 2rem; background: #FFF9E6; border: 1px solid var(--color-mcd-gold); border-radius: var(--radius-sm); padding: 1.25rem;">
+        <h3 style="font-size: 1.1rem; font-weight: 900; color: var(--color-mcd-dark); margin-bottom: 0.35rem;">
+          🎙️ Voice Drive-Thru Ordering
+        </h3>
+        <p style="font-size: 0.9rem; color: #555555; line-height: 1.5;">
+          Just like pulling up to the speaker box, our AI Voice Host in the bottom-right widget is ready to take your burger, fries, and drink orders 24 hours a day!
+        </p>
       </div>
     </div>
 
-    <!-- Location & Directions -->
-    <div>
-      <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Getting Here</h2>
-      <div class="card" style="margin-bottom: 1.5rem;">
-        <div class="card-icon">📍</div>
-        <h3 class="card-title">San Francisco Culinary District</h3>
-        <p class="card-desc" style="margin-bottom: 1rem;">
-          {{ site.restaurant.address }}
-        </p>
-        <p class="card-desc" style="margin-bottom: 0.75rem;">
-          <strong>Valet Service:</strong> Complimentary valet drop-off is stationed in front of our main entrance on Artisan Boulevard from 5:00 PM nightly.
-        </p>
-        <p class="card-desc">
-          <strong>Public Transit:</strong> 4-minute walk from Montgomery St. BART / Muni Station.
-        </p>
-      </div>
-
-      <!-- Visual Map Card Placeholder -->
-      <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 2rem; text-align: center;">
-        <div style="font-size: 3rem; margin-bottom: 0.75rem;">🗺️</div>
-        <h3 style="font-size: 1.25rem; color: #ffffff; margin-bottom: 0.5rem;">Interactive Map</h3>
-        <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
-          Corner of Artisan Blvd & 4th Street. Look for the illuminated copper wine arch.
-        </p>
-        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-secondary" style="font-size: 0.88rem;">
-          Open in Google Maps &rarr;
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Private Events Inquiry Form -->
-  <div class="form-wrapper" style="margin-bottom: 4rem;">
-    <div class="section-header" style="margin-bottom: 2rem;">
-      <span class="section-subtitle">Private Dining & Celebrations</span>
-      <h2 style="font-size: 2rem; margin-bottom: 0.5rem;">Host Your Special Event</h2>
-      <p style="color: var(--color-text-muted); font-size: 0.95rem;">
-        From intimate cellar dinners to full buyouts for up to 120 guests.
+    <div class="mcd-card" style="padding: 2rem;">
+      <h2 style="font-size: 1.5rem; font-weight: 900; margin-bottom: 1.25rem; color: var(--color-mcd-red);">
+        📍 Location & Curbside
+      </h2>
+      <p style="font-size: 1.05rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-mcd-dark);">
+        {{ site.restaurant.address }}
       </p>
+      <p style="font-size: 0.9rem; color: var(--color-mcd-gray); margin-bottom: 1.5rem;">
+        Cross streets: Fast Lane & Golden Boulevard. Dual drive-thru ordering lanes available for rapid service.
+      </p>
+
+      <h3 style="font-size: 1.1rem; font-weight: 900; margin-bottom: 0.5rem;">
+        Customer Support & Feedback
+      </h3>
+      <p style="font-size: 0.95rem; margin-bottom: 0.25rem;">
+        <strong>Phone:</strong> <a href="tel:{{ site.restaurant.phone }}">{{ site.restaurant.phone }}</a>
+      </p>
+      <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">
+        <strong>Email:</strong> <a href="mailto:{{ site.restaurant.email }}">{{ site.restaurant.email }}</a>
+      </p>
+
+      <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-voice-drivethru" style="display: inline-flex; width: 100%; justify-content: center; text-decoration: none;">
+        🗺️ Get Driving Directions
+      </a>
     </div>
 
-    <form onsubmit="event.preventDefault(); alert('Thank you! Our private events coordinator will be in touch within 24 hours.');">
-      <div class="form-grid">
-        <div class="form-group">
-          <label class="form-label">Your Name</label>
-          <input type="text" class="form-control" placeholder="Jane Doe" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email Address</label>
-          <input type="email" class="form-control" placeholder="jane@example.com" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Event Type</label>
-          <select class="form-control">
-            <option>Wedding Rehearsal Dinner</option>
-            <option>Corporate Dinner / Executive Gala</option>
-            <option>Birthday / Anniversary Celebration</option>
-            <option>Full Restaurant Buyout</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Estimated Guest Count</label>
-          <input type="number" class="form-control" placeholder="e.g. 25" min="8" max="150" required>
-        </div>
-        <div class="form-group full-width">
-          <label class="form-label">Event Details & Target Date</label>
-          <textarea rows="3" class="form-control" placeholder="Tell us about the desired date, catering preferences, or AV needs..."></textarea>
-        </div>
-      </div>
-      <div style="text-align: center;">
-        <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; width: 100%;">
-          Send Private Event Inquiry
-        </button>
-      </div>
-    </form>
   </div>
-
-</div>
+</main>

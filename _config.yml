@@ -1,7 +1,7 @@
 # GitHub Pages Jekyll Configuration
-title: "Savoria Trattoria & Bar"
-tagline: "Authentic Italian Gastronomy & Modern Hospitality"
-description: "Experience artisanal hand-rolled pastas, wood-fired specialties, and curated wines with our automated voice reservation concierge."
+title: "Golden Bites - Fast Food & Drive-Thru"
+tagline: "I'm Lovin' Every Bite • Fast Food & Quick Drive-Thru"
+description: "Simple, iconic burgers, crispy golden fries, cold drinks, and voice-assisted drive-thru ordering."
 theme: jekyll-theme-cayman
 
 # Site URLs
@@ -14,24 +14,19 @@ permalink: /:basename.html
 
 # Navigation Items
 navigation:
-  - title: "Home"
+  - title: "🍔 Full Menu"
     url: "/index.html"
-  - title: "Menu"
-    url: "/menu.html"
-  - title: "Reservations"
-    url: "/reservations.html"
-  - title: "Our Story"
-    url: "/about.html"
-  - title: "Contact"
+  - title: "🍟 Combos & Deals"
+    url: "/deals.html"
+  - title: "📍 Drive-Thru & Hours"
     url: "/contact.html"
 
-# Restaurant Details
+# Fast Food Details
 restaurant:
-  name: "Savoria Trattoria & Bar"
-  phone: "+1 (555) 728-6742"
-  email: "reservations@savoriatrattoria.com"
-  address: "452 Artisan Boulevard, Culinary District, CA 94103"
+  name: "Golden Bites Fast Food"
+  phone: "1-800-555-MACS"
+  email: "support@goldenbites.com"
+  address: "742 Fast Lane, Drive-Thru Plaza, CA 90210"
   hours:
-    mon_thu: "11:30 AM - 10:00 PM"
-    fri_sat: "11:30 AM - 11:30 PM"
-    sun: "10:30 AM - 9:30 PM (Brunch & Dinner)"
+    lobby: "6:00 AM - 11:00 PM Daily"
+    drivethru: "Open 24 Hours Daily"

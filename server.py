@@ -69,8 +69,8 @@ def render_jekyll_page(content, page_title="Savoria Trattoria"):
     layout = layout.replace("{{ content }}", content)
 
     # Simple variable replacements
-    site_title = "Savoria Trattoria & Bar"
-    site_desc = "Authentic Italian Gastronomy & Modern Hospitality"
+    site_title = "Golden Bites - Fast Food & Drive-Thru"
+    site_desc = "Simple McDonald's style fast-food menu with voice drive-thru ordering."
     title = front_matter.get("title", page_title)
 
     layout = re.sub(r"\{% if page\.title %\}.*?\{% endif %\}", title + " | ", layout)
@@ -78,21 +78,16 @@ def render_jekyll_page(content, page_title="Savoria Trattoria"):
     layout = layout.replace("{{ page.title }}", title)
     layout = layout.replace("{{ page.description | default: site.description }}", site_desc)
     layout = layout.replace("{{ site.restaurant.name }}", site_title)
-    layout = layout.replace("{{ site.restaurant.phone }}", "+1 (555) 728-6742")
-    layout = layout.replace("{{ site.restaurant.email }}", "reservations@savoriatrattoria.com")
-    layout = layout.replace("{{ site.restaurant.address }}", "452 Artisan Boulevard, Culinary District, CA 94103")
-    layout = layout.replace("{{ site.restaurant.hours.mon_thu }}", "11:30 AM - 10:00 PM")
-    layout = layout.replace("{{ site.restaurant.hours.fri_sat }}", "11:30 AM - 11:30 PM")
-    layout = layout.replace("{{ site.restaurant.hours.sun }}", "10:30 AM - 9:30 PM (Brunch & Dinner)")
+    layout = layout.replace("{{ site.restaurant.phone }}", "1-800-555-MACS")
+    layout = layout.replace("{{ site.restaurant.email }}", "support@goldenbites.com")
+    layout = layout.replace("{{ site.restaurant.address }}", "742 Fast Lane, Drive-Thru Plaza, CA 90210")
     layout = layout.replace("{{ 'now' | date: \"%Y\" }}", "2026")
 
     # Clean up navigation loops
     nav_links_html = """
-      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-      <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
-      <li class="nav-item"><a href="reservations.html" class="nav-link">Reservations</a></li>
-      <li class="nav-item"><a href="about.html" class="nav-link">Our Story</a></li>
-      <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+      <li class="nav-item"><a href="index.html" class="nav-link">🍔 Full Menu</a></li>
+      <li class="nav-item"><a href="deals.html" class="nav-link">🍟 Combos & Deals</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">📍 Drive-Thru & Hours</a></li>
     """
     layout = re.sub(r"\{% for item in site\.navigation %\}.*?\{% endfor %\}", nav_links_html, layout, flags=re.DOTALL)
     layout = re.sub(r"\{\{.*?relative_url.*?\}\}", lambda m: m.group(0).split("'")[1].lstrip("/"), layout)
