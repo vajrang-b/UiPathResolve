@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="site-body">
+  {% include navbar.html %}
+
+  <main id="main-content" class="site-main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  {% unless page.has_inline_widget %}
+    {% include widget.html %}
+  {% endunless %}
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!-- UiPath Resolve Voice & Chat Widget -->
+<script src="https://staging.uipath.com/vajrang/DefaultTenant/cx_/widget/v1/loader.js"
+  data-agent-id="08aa5a00-ffe1-f111-91f2-7c1e52021864"
+  data-api-url="https://staging.uipath.com/vajrang/DefaultTenant/cx_/api"
+  data-title="Restaurant"
+  data-color="#6366f1"
+  data-position="bottom-right"
+  data-theme="dark">
+</script>
+
+<!-- Voice Calling Microphone Permission Handler for iFrames -->
+<script>
+  (function() {
+    function enforceMicrophonePermission(iframe) {
+      if (!iframe) return;
+      try {
+        var currentAllow = iframe.getAttribute('allow') || '';
+        if (!currentAllow.toLowerCase().includes('microphone')) {
+          var updated = currentAllow ? currentAllow + '; microphone' : 'microphone';
+          iframe.setAttribute('allow', updated);
+          console.info('[UiPath Voice Support] microphone permission added to iframe:', iframe);
+        }
+      } catch (err) {
+        console.warn('[UiPath Voice Support] Error setting iframe allow attribute:', err);
+      }
+    }
+
+    // Set permission on any existing iframes immediately
+    document.querySelectorAll('iframe').forEach(enforceMicrophonePermission);
+
+    // Watch for dynamically added iframes from loader.js / widget.js
+    var observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            if (node.tagName === 'IFRAME') {
+              enforceMicrophonePermission(node);
+            } else if (node.querySelectorAll) {
+              node.querySelectorAll('iframe').forEach(enforceMicrophonePermission);
+            }
+          }
+        });
+      });
+    });
+
+    observer.observe(document.documentElement, {
+      childList: true,
+      subtree: true
+    });
+  })();
+</script>

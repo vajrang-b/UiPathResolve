@@ -1,0 +1,55 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <span class="brand-emblem">🍴</span>
+          <span class="brand-title">SAVORIA</span>
+        </div>
+        <p class="brand-desc">
+          Crafting memorable dining memories with authentic Italian heritage, sustainable local sourcing, and warm hospitality.
+        </p>
+        <div class="voice-badge">
+          <span class="badge-dot"></span>
+          <span>Voice Concierge Active 24/7</span>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Hours of Service</h4>
+        <ul class="footer-info-list">
+          <li><strong>Mon – Thu:</strong> {{ site.restaurant.hours.mon_thu }}</li>
+          <li><strong>Fri – Sat:</strong> {{ site.restaurant.hours.fri_sat }}</li>
+          <li><strong>Sunday:</strong> {{ site.restaurant.hours.sun }}</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Find Us</h4>
+        <address class="footer-address">
+          {{ site.restaurant.address }}<br>
+          <a href="tel:{{ site.restaurant.phone }}">{{ site.restaurant.phone }}</a><br>
+          <a href="mailto:{{ site.restaurant.email }}">{{ site.restaurant.email }}</a>
+        </address>
+        <p class="valet-tag">✨ Complimentary Valet Parking Available</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="{{ '/menu.html' | relative_url }}">Dinner & Wine Menu</a></li>
+          <li><a href="{{ '/reservations.html' | relative_url }}">Reserve a Table</a></li>
+          <li><a href="{{ '/about.html' | relative_url }}">Chef Matteo's Story</a></li>
+          <li><a href="{{ '/contact.html' | relative_url }}">Private Events & Inquiries</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ 'now' | date: "%Y" }} {{ site.restaurant.name }}. All rights reserved.</p>
+      <p class="ai-powered-by">
+        Powered by <a href="https://uipath.com" target="_blank" rel="noopener">UiPath Resolve</a> Voice & Conversational AI.
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,166 @@
+---
+layout: default
+title: Reservations - Reserve Your Table
+---
+
+<section class="hero-section" style="padding: 4rem 1.5rem 3rem;">
+  <span class="section-subtitle">Join Us For An Unforgettable Evening</span>
+  <h1 class="hero-title" style="font-size: 3rem;">Reserve Your Table</h1>
+  <p class="hero-subtitle">
+    Book online below or speak directly with our Voice AI Host in the bottom right corner for immediate booking assistance.
+  </p>
+</section>
+
+<div class="section-container" style="margin-top: 1.5rem;">
+
+  <!-- Voice Booking Spotlight -->
+  <div class="voice-ai-banner" style="margin-top: 0; margin-bottom: 3rem;">
+    <div class="voice-ai-content">
+      <div class="hero-pill" style="margin-bottom: 0.75rem;">
+        <span>🎙️ Fastest Way to Book</span>
+      </div>
+      <h3>Book Hands-Free Using Voice</h3>
+      <p>
+        Don't feel like typing out a form? Click the voice assistant button in the bottom right corner of this screen. Just say <em>"Book a table for 4 this Friday at 7:30 PM"</em> and our voice host will confirm your reservation in seconds!
+      </p>
+    </div>
+  </div>
+
+  <!-- Reservation Form -->
+  <div class="form-wrapper">
+    <div class="section-header" style="margin-bottom: 2rem;">
+      <h2 style="font-size: 1.9rem; margin-bottom: 0.5rem;">Online Booking Request</h2>
+      <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+        Fill out your dining preferences and we will immediately hold your table.
+      </p>
+    </div>
+
+    <form id="reservationForm" onsubmit="event.preventDefault(); handleBooking();">
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label" for="guestName">Full Name *</label>
+          <input type="text" id="guestName" class="form-control" placeholder="e.g. Maria Rossi" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="guestEmail">Email Address *</label>
+          <input type="email" id="guestEmail" class="form-control" placeholder="maria@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="guestPhone">Phone Number *</label>
+          <input type="tel" id="guestPhone" class="form-control" placeholder="+1 (555) 000-0000" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="partySize">Party Size *</label>
+          <select id="partySize" class="form-control" required>
+            <option value="1">1 Person (Solo Dining / Counter)</option>
+            <option value="2" selected>2 Guests (Intimate Table)</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests (Standard Booth/Table)</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests (Large Table)</option>
+            <option value="7+">7+ Guests (Private Dining Inquiry)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="resDate">Reservation Date *</label>
+          <input type="date" id="resDate" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="resTime">Preferred Time *</label>
+          <select id="resTime" class="form-control" required>
+            <option value="17:00">5:00 PM</option>
+            <option value="17:30">5:30 PM</option>
+            <option value="18:00">6:00 PM</option>
+            <option value="18:30">6:30 PM</option>
+            <option value="19:00" selected>7:00 PM</option>
+            <option value="19:30">7:30 PM</option>
+            <option value="20:00">8:00 PM</option>
+            <option value="20:30">8:30 PM</option>
+            <option value="21:00">9:00 PM</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="form-label" for="seatingArea">Preferred Seating Atmosphere</label>
+          <select id="seatingArea" class="form-control">
+            <option value="main">Main Dining Room (Vibrant & Elegant)</option>
+            <option value="patio">Heated Courtyard Patio (Romantic & Open Air)</option>
+            <option value="counter">Chef's Kitchen Counter (Watch the Pasta Action)</option>
+            <option value="wine_room">Sommelier's Wine Cellar (Quiet & Intimate)</option>
+          </select>
+        </div>
+
+        <div class="form-group full-width">
+          <label class="form-label" for="specialNotes">Dietary Restrictions or Special Occasions</label>
+          <textarea id="specialNotes" rows="3" class="form-control" placeholder="e.g. Anniversary celebration, peanut allergy, prefer a quiet corner booth..."></textarea>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <button type="submit" class="btn btn-primary" style="padding: 0.85rem 2.5rem; font-size: 1rem; width: 100%;">
+          Confirm Reservation Request
+        </button>
+      </div>
+
+      <div id="bookingConfirmation" style="display: none; margin-top: 1.5rem; padding: 1.25rem; background: rgba(34,197,94,0.15); border: 1px solid rgba(74,222,128,0.4); border-radius: var(--radius-md); text-align: center; color: #86efac;">
+        <h4 style="font-size: 1.15rem; margin-bottom: 0.35rem; color: #ffffff;">🎉 Reservation Request Received!</h4>
+        <p style="font-size: 0.95rem;">
+          Thank you! We have sent a confirmation email and SMS with your table details. We look forward to welcoming you to Savoria.
+        </p>
+      </div>
+    </form>
+  </div>
+
+  <!-- Booking Policies -->
+  <div class="card-grid" style="margin-top: 3.5rem;">
+    <div class="card">
+      <div class="card-icon">⏱️</div>
+      <h3 class="card-title">Grace Period</h3>
+      <p class="card-desc">
+        We hold reservations for up to 15 minutes past scheduled time before releasing the table to waiting walk-in guests.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">👔</div>
+      <h3 class="card-title">Dress Code</h3>
+      <p class="card-desc">
+        Smart casual attire is appreciated. Please refrain from beachwear, athletic apparel, or open flip-flops in the main dining room.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🍾</div>
+      <h3 class="card-title">Corkage Policy</h3>
+      <p class="card-desc">
+        $35 per 750ml bottle (up to 2 bottles), waived for every bottle purchased from our sommelier reserve list.
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Set default date to tomorrow
+  (function() {
+    var dateInput = document.getElementById('resDate');
+    if (dateInput) {
+      var tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+      dateInput.min = new Date().toISOString().split('T')[0];
+    }
+  })();
+
+  function handleBooking() {
+    var confirmBox = document.getElementById('bookingConfirmation');
+    if (confirmBox) {
+      confirmBox.style.display = 'block';
+      confirmBox.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+</script>

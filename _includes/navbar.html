@@ -1,0 +1,76 @@
+<nav class="site-nav" role="navigation" aria-label="Main Navigation">
+  <div class="nav-container">
+    <a href="{{ '/index.html' | relative_url }}" class="nav-brand">
+      <span class="brand-emblem">🍴</span>
+      <span class="brand-text">
+        <span class="brand-title">SAVORIA</span>
+        <span class="brand-subtitle">Trattoria & Bar</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+
+    <div class="nav-menu" id="navMenu">
+      <ul class="nav-list">
+        {% for item in site.navigation %}
+          <li class="nav-item">
+            <a href="{{ item.url | relative_url }}" class="nav-link {% if page.url == item.url %}active{% endif %}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="nav-actions">
+        <a href="{{ '/reservations.html' | relative_url }}" class="btn btn-primary nav-cta">
+          Book Table
+        </a>
+        <button type="button" class="btn btn-voice-ai" id="voiceConciergeBtn" title="Speak to Voice AI Assistant">
+          <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+            <line x1="12" y1="19" x2="12" y2="22"></line>
+          </svg>
+          <span>Voice Host</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  (function() {
+    var toggle = document.getElementById('navToggle');
+    var menu = document.getElementById('navMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('is-open');
+        toggle.classList.toggle('is-open');
+      });
+    }
+
+    // Voice Host button scrolls to widget or triggers it
+    var voiceBtn = document.getElementById('voiceConciergeBtn');
+    if (voiceBtn) {
+      voiceBtn.addEventListener('click', function() {
+        // Look for the CX widget toggle button or trigger notification
+        var cxWidget = document.querySelector('[data-agent-id]') || document.querySelector('iframe');
+        if (cxWidget) {
+          cxWidget.scrollIntoView({ behavior: 'smooth' });
+        }
+        // Pulse highlight the bottom right widget
+        var pulseElem = document.querySelector('.uipath-voice-widget-card') || document.querySelector('[data-agent-id]');
+        if (pulseElem) {
+          pulseElem.classList.add('pulse-highlight');
+          setTimeout(function() { pulseElem.classList.remove('pulse-highlight'); }, 2000);
+        }
+      });
+    }
+  })();
+</script>

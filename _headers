@@ -1,0 +1,3 @@
+/*
+  Permissions-Policy: microphone=(self)
+  Content-Security-Policy: connect-src 'self' wss://voice.uni-stg-svc-eus-01-g.kstg.kubefabric.uipath.systems https://voice.uni-stg-svc-eus-01-g.kstg.kubefabric.uipath.systems https://staging.uipath.com wss://staging.uipath.com; media-src 'self' blob:; worker-src 'self' blob:;

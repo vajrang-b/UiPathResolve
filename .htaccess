@@ -1,0 +1,4 @@
+<IfModule mod_headers.c>
+  Header set Permissions-Policy "microphone=(self)"
+  Header set Content-Security-Policy "connect-src 'self' wss://voice.uni-stg-svc-eus-01-g.kstg.kubefabric.uipath.systems https://voice.uni-stg-svc-eus-01-g.kstg.kubefabric.uipath.systems https://staging.uipath.com wss://staging.uipath.com; media-src 'self' blob:; worker-src 'self' blob:;"
+</IfModule>

@@ -1,0 +1,37 @@
+# GitHub Pages Jekyll Configuration
+title: "Savoria Trattoria & Bar"
+tagline: "Authentic Italian Gastronomy & Modern Hospitality"
+description: "Experience artisanal hand-rolled pastas, wood-fired specialties, and curated wines with our automated voice reservation concierge."
+theme: jekyll-theme-cayman
+
+# Site URLs
+baseurl: ""
+url: "https://vajrang-b.github.io"
+
+# Markdown & Build Settings
+markdown: kramdown
+permalink: /:basename.html
+
+# Navigation Items
+navigation:
+  - title: "Home"
+    url: "/index.html"
+  - title: "Menu"
+    url: "/menu.html"
+  - title: "Reservations"
+    url: "/reservations.html"
+  - title: "Our Story"
+    url: "/about.html"
+  - title: "Contact"
+    url: "/contact.html"
+
+# Restaurant Details
+restaurant:
+  name: "Savoria Trattoria & Bar"
+  phone: "+1 (555) 728-6742"
+  email: "reservations@savoriatrattoria.com"
+  address: "452 Artisan Boulevard, Culinary District, CA 94103"
+  hours:
+    mon_thu: "11:30 AM - 10:00 PM"
+    fri_sat: "11:30 AM - 11:30 PM"
+    sun: "10:30 AM - 9:30 PM (Brunch & Dinner)"
